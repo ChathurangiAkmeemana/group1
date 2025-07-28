@@ -18,11 +18,8 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Install Railway CLI (latest)
+      - name: Install Railway CLI
         run: npm install -g @railway/cli
-
-      - name: Link Railway Project using Token
-        run: railway link --token ${{ secrets.RAILWAY_API_TOKEN }}
 
       - name: Deploy to Railway
         run: railway up
